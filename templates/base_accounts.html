@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock %}
+
+{% block body %}
+  <header>
+    <img src="../media/logos/S4 Carlisle Logo.png" alt="" height="80px" width="240px" style="margin: 10px;">
+  
+  <div class="container">
+    <h1 class="text-center logo my-4">
+      <a href="{% url 'home' %}">Permission Management System Test</a>
+    </h1>
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer><p  style="margin: 10px;" class="text-right my-4">©2023 S4Carlisle Publishing Services Pvt. Ltd.</p>
+  </footer>
+{% endblock %}
